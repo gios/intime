@@ -26,7 +26,7 @@
     "react",
     "app"
   ],
-  "devDependencies": {
+  "dependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.6.14",
     "babel-loader": "^5.3.1",
@@ -38,8 +38,5 @@
     "react-router": "^0.13.3",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
-  },
-  "dependencies": {
-    "nodemon": "^1.3.7"
   }
 }
