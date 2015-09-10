@@ -24,13 +24,13 @@
     "app"
   ],
   "devDependencies": {
-    "babel": "^5.8.23",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "mocha": "^2.3.2",
     "nodemon": "^1.4.1"
   },
   "dependencies": {
+    "babel": "^5.8.23",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
   }
