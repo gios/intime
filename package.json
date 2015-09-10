@@ -2,15 +2,12 @@
   "name": "intime",
   "version": "0.0.0",
   "description": "Real-time react notification app",
-  "main": "lib/server/server.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf lib",
-    "watch-js": "./node_modules/.bin/babel src -d lib --experimental -w",
-    "dev-server": "node lib/server/webpack",
-    "server": "nodemon lib/server/server",
-    "start": "npm run watch-js & npm run dev-server & npm run server",
-    "build": "npm run clean && ./node_modules/.bin/babel src -d lib --experimental"
+    "start": "nodemon src/server/server.js --exec babel-node",
+    "build": "babel src -d dist",
+    "serve": "node dist/server/server.js",
+    "test": "mocha --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
@@ -26,17 +23,15 @@
     "react",
     "app"
   ],
-  "dependencies": {
+  "devDependencies": {
     "babel": "^5.8.23",
-    "babel-core": "^5.6.14",
-    "babel-loader": "^5.3.1",
     "express": "^4.13.3",
     "jade": "^1.11.0",
-    "node-libs-browser": "^0.5.2",
+    "mocha": "^2.3.2",
+    "nodemon": "^1.4.1"
+  },
+  "dependencies": {
     "react": "^0.13.3",
-    "react-hot-loader": "^1.2.8",
-    "react-router": "^0.13.3",
-    "webpack": "^1.10.1",
-    "webpack-dev-server": "^1.10.1"
+    "react-router": "^0.13.3"
   }
 }

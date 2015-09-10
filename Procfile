@@ -1,1 +1,1 @@
-web: node lib/server/server.js
+web: npm run build && npm run serve
