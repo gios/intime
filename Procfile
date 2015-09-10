@@ -1,1 +1,1 @@
-web: npm run serve
+web: node release/server/server.js
