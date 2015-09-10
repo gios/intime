@@ -5,9 +5,9 @@
   "main": "server/server.js",
   "scripts": {
     "start": "nodemon src/server/server.js --exec babel-node",
-    "build": "node_modules/.bin/babel src -d dist",
-    "serve": "node dist/server/server.js",
-    "test": "node_modules/.bin/mocha --compilers js:babel/register"
+    "build": "babel src -d release",
+    "serve": "node release/server/server.js",
+    "test": "mocha --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
