@@ -6,6 +6,7 @@ const app = express();
 // set up Jade
 app.set("views", "./views");
 app.set("view engine", "jade");
+app.set("port", (process.env.PORT || 5000));
 
 import routes from "../shared/routes";
 
@@ -16,6 +17,6 @@ app.get("/*", function (req, res) {
   });
 });
 
-app.listen(3000, function () {
-  console.log("Example app listening at http://localhost:3000");
+app.listen(app.get("port"), function () {
+  console.log("Intime listening at http://localhost:", app.get("port"));
 });
