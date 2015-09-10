@@ -5,8 +5,8 @@
   "main": "server/server.js",
   "scripts": {
     "start": "nodemon src/server/server.js --exec babel-node",
-    "build": "babel src -d release",
-    "serve": "node release/server/server.js",
+    "build": "babel src -d dist",
+    "serve": "node dist/server/server.js",
     "test": "mocha --compilers js:babel/register"
   },
   "repository": {
@@ -24,12 +24,12 @@
     "app"
   ],
   "devDependencies": {
-    "express": "^4.13.3",
-    "jade": "^1.11.0",
     "mocha": "^2.3.2",
     "nodemon": "^1.4.1"
   },
   "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
     "babel": "^5.8.23",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
