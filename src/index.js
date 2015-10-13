@@ -1,4 +1,5 @@
 import React from 'react';
-import { App } from './App';
+import ReactDOM from 'react-dom';
+import { Login } from './login/Login.js';
 
-React.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Login />, document.getElementById('intime'));
