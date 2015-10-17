@@ -9,31 +9,36 @@ export class Login extends Component {
     this.items = [];
   }
 
-  componentWillMount() {
-    var self = this;
-    this.firebaseRef = new Firebase('https://ReactFireTodoApp.firebaseio.com/items');
-    this.firebaseRef.on('child_added', function(dataSnapshot) {
-      this.items.push(dataSnapshot.val());
-      this.setState({
-        items: this.items
-      });
-    }.bind(this));
-  }
-
   render() {
-
-    var iterate = _.each(this.state.items, function(item) {
-      return (
-        <div>
-          <span>item.text</span>
-        </div>
-      );
-    });
-
     return (
-      <h1>
-        Hello {iterate}
-      </h1>
+      <form className="form-horizontal">
+        <div className="form-group">
+          <label className="col-sm-2 control-label">Email</label>
+          <div className="col-sm-10">
+            <input type="email" className="form-control" placeholder="Email" />
+          </div>
+        </div>
+        <div className="form-group">
+          <label className="col-sm-2 control-label">Password</label>
+          <div className="col-sm-10">
+            <input type="password" className="form-control" placeholder="Password" />
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="col-sm-offset-2 col-sm-10">
+            <div className="checkbox">
+              <label>
+                <input type="checkbox" /> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="col-sm-offset-2 col-sm-10">
+            <button type="submit" className="btn btn-default">Sign in</button>
+          </div>
+        </div>
+      </form>
     );
   }
 }
