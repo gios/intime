@@ -11,7 +11,6 @@ export class Login extends Component {
   render() {
     return (
       <div className='login-block'>
-        <i className="fa fa-lock"></i>
         <h1>Login</h1>
         <input type='text' placeholder='Username' id='username' />
         <input type='password' placeholder='Password' id='password' />
