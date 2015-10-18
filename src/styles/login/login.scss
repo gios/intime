@@ -2,6 +2,8 @@ $background: #fff;
 $input-border: #ccc;
 $button-border: #132d6e;
 $button-background: #0d38a2;
+$footer-background: #404040;
+$footer-text: #aaa;
 
 .login-block {
   background: $background;
@@ -64,5 +66,21 @@ $button-background: #0d38a2;
     outline: none;
     text-transform: uppercase;
     width: 100%;
+  }
+
+  .login-footer {
+    background-color: $footer-background;
+    bottom: 0;
+    box-sizing: border-box;
+    color: $footer-text;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    .info-footer {
+      padding-top: 16px;
+      text-align: center;
+    }
   }
 }

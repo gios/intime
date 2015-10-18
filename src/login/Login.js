@@ -15,6 +15,11 @@ export class Login extends Component {
         <span className='user-icon'></span><input type='text' placeholder='Username' id='username' />
         <span className='password-icon'></span><input type='password' placeholder='Password' id='password' />
         <button>Submit</button>
+        <div className='login-footer'>
+          <div className='info-footer'>
+            &copy; {this.props.currentYear} Version {this.props.version}
+          </div>
+        </div>
       </div>
     );
   }
