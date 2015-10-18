@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import { VERSION, CURRENT_YEAR } from '../constants.js';
 
 export class Login extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ export class Login extends Component {
         <button>Submit</button>
         <div className='login-footer'>
           <div className='info-footer'>
-            &copy; {this.props.currentYear} Version {this.props.version}
+            &copy; {CURRENT_YEAR} Version {VERSION}
           </div>
         </div>
       </div>
