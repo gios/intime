@@ -1,15 +1,11 @@
 $background: #fff;
-$header: #ff656c;
 $input-border: #ccc;
-$button-hover: #ff7b81;
-$button-border: #e15960;
-$button-background: #ff656c;
+$button-border: #132d6e;
+$button-background: #0d38a2;
 
 .login-block {
   background: $background;
-  border-radius: 5px;
-  border-top: 5px solid $header;
-  margin: 0 auto;
+  margin: 10% auto;
   padding: 20px;
   width: 320px;
 
@@ -32,10 +28,25 @@ $button-background: #ff656c;
     outline: none;
     padding: 0 20px 0 50px;
     width: 100%;
+  }
 
+  .user-icon {
+    &:before {
+      content: '\f007';
+      font-family: FontAwesome;
+      left: 20px;
+      position: relative;
+      top: 30px;
+    }
+  }
+
+  .password-icon {
     &:before {
       content: '\f023';
       font-family: FontAwesome;
+      left: 20px;
+      position: relative;
+      top: 30px;
     }
   }
 
@@ -53,9 +64,5 @@ $button-background: #ff656c;
     outline: none;
     text-transform: uppercase;
     width: 100%;
-
-    &:hover {
-      background: $button-hover;
-    }
   }
 }

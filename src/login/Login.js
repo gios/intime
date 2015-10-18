@@ -12,8 +12,8 @@ export class Login extends Component {
     return (
       <div className='login-block'>
         <h1>Login</h1>
-        <input type='text' placeholder='Username' id='username' />
-        <input type='password' placeholder='Password' id='password' />
+        <span className='user-icon'></span><input type='text' placeholder='Username' id='username' />
+        <span className='password-icon'></span><input type='password' placeholder='Password' id='password' />
         <button>Submit</button>
       </div>
     );
