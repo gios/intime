@@ -1,3 +1,41 @@
+$type-checkbox-background: #fff;
+
 .registration-block {
   @extend %form-block;
+
+  > label {
+    bottom: 28px;
+    font-size: 16px;
+    left: 30px;
+    position: relative;
+  }
+
+  .type-checkbox {
+    display: block;
+    height: 25px;
+    visibility: hidden;
+    width: 25px;
+
+    &:checked:after,
+    &:after {
+      background-color: $type-checkbox-background;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 25px;
+      height: 17px;
+      left: 0;
+      position: relative;
+      top: -3px;
+      visibility: visible;
+      width: 17px;
+    }
+
+    &:checked:after {
+      content: '\f14a';
+    }
+
+    &:after {
+      content: '\f096';
+    }
+  }
 }

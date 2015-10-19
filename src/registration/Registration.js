@@ -13,6 +13,8 @@ export class Registration extends Component {
         <span className='user-icon'></span><input type='text' placeholder='Username' id='username' />
         <span className='password-icon'></span><input type='password' placeholder='Password' id='password' />
         <span className='password-icon'></span><input type='password' placeholder='Re-Password' id='re-password' />
+        <input className='type-checkbox' id='storage' type='checkbox' /><label htmlFor='storage'>Storage</label>
+        <input className='type-checkbox' id='operator' type='checkbox' /><label htmlFor='operator'>Operator</label>
         <button>Registration</button>
         <div className='footer'>
           <div className='info-footer'>
