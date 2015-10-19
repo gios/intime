@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { VERSION, CURRENT_YEAR } from '../constants.js';
+import { Footer } from '../footer/Footer.js';
 
 export class Registration extends Component {
   constructor(props) {
@@ -16,11 +16,7 @@ export class Registration extends Component {
         <input className='type-checkbox' id='storage' type='checkbox' /><label htmlFor='storage'>Storage</label>
         <input className='type-checkbox' id='operator' type='checkbox' /><label htmlFor='operator'>Operator</label>
         <button>Registration</button>
-        <div className='footer'>
-          <div className='info-footer'>
-            &copy; {CURRENT_YEAR} Version {VERSION}
-          </div>
-        </div>
+        <Footer />
       </div>
     );
   }

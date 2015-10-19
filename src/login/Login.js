@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { VERSION, CURRENT_YEAR } from '../constants.js';
+import { Footer } from '../footer/Footer.js';
 
 export class Login extends Component {
   constructor(props) {
@@ -15,11 +15,7 @@ export class Login extends Component {
         <span className='user-icon'></span><input type='text' placeholder='Username' id='username' />
         <span className='password-icon'></span><input type='password' placeholder='Password' id='password' />
         <button>Submit</button>
-        <div className='footer'>
-          <div className='info-footer'>
-            &copy; {CURRENT_YEAR} Version {VERSION}
-          </div>
-        </div>
+        <Footer />
       </div>
     );
   }

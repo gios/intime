@@ -1,18 +1,1 @@
-$footer-background: #404040;
-$footer-text: #aaa;
 
-.footer {
-  background-color: $footer-background;
-  bottom: 0;
-  box-sizing: border-box;
-  color: $footer-text;
-  height: 50px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-
-  .info-footer {
-    padding-top: 16px;
-    text-align: center;
-  }
-}
