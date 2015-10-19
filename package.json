@@ -48,6 +48,7 @@
     "webpack-hot-middleware": "^2.4.1"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.3.5",
     "file-loader": "^0.8.4",
     "font-awesome": "^4.4.0",
     "history": "^1.12.5",

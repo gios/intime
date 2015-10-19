@@ -1,5 +1,11 @@
+// Main Styles
+@import './main';
+
 // Login Form
-@import './login/login';
+@import './modules/login';
+
+// Registration format
+@import './modules/registration';
 
 // Error Route
 @import './no-match';
