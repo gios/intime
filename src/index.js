@@ -5,6 +5,7 @@ import history from './history';
 import { Login } from './login/Login.js';
 import { Registration } from './registration/Registration.js';
 import { NoMatch } from './NoMatch.js';
+import { CheckIsLogined } from './CheckIsLogined.js';
 import Parse from 'parse';
 
 Parse.initialize('3SXE0wOLoHz4xTqLIAoKh92OnEAVUHNNtT9FncKx', 'awFdWn4NQq2FYNXlq18Hg8lUFZHgRXGfQBL4refn');
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path='login' component={Login} />
     </Route>
     <Route path='registration' component={Registration} />
+    <Route path='checkIsLogined' component={CheckIsLogined} />
     <Route path='*' component={NoMatch}/>
   </Router>
 , document.getElementById('intime'));
