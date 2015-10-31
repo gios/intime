@@ -5,6 +5,9 @@ import history from './history';
 import { Login } from './login/Login.js';
 import { Registration } from './registration/Registration.js';
 import { NoMatch } from './NoMatch.js';
+import Parse from 'parse';
+
+Parse.initialize('3SXE0wOLoHz4xTqLIAoKh92OnEAVUHNNtT9FncKx', 'awFdWn4NQq2FYNXlq18Hg8lUFZHgRXGfQBL4refn');
 
 import './styles/base.scss';
 import '../node_modules/font-awesome/scss/font-awesome.scss';

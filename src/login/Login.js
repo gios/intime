@@ -17,9 +17,19 @@ export class Login extends Component {
   }
 
   signUp() {
+    let user = new Parse.User();
     let username = this.refs.username.value;
     let password = this.refs.password.value;
-    console.log(username, password);
+    user.set('username', username);
+    user.set('password', password);
+    Parse.User.logIn('myname', 'mypass', {
+      success: function(user) {
+        console.log(user);
+      },
+      error: function(user, error) {
+        console.log(user, error);
+      }
+    });
   }
 
   render() {
