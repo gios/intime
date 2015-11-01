@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import history from '../history.js';
 import { Footer } from '../footer/Footer.js';
+var socket = require('socket.io-client')('http://localhost');
 
 export class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {loginBtn: false};
+  }
+
+  componentWillMount() {
+    console.log(socket);
+    socket.on('news', function (data) {
+      console.log(data);
+      socket.emit('my other event', { my: 'data' });
+    });
   }
 
   validationValues() {
