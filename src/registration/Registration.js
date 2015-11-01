@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import Parse from 'parse';
 import history from '../history.js';
 import { Footer } from '../footer/Footer.js';
 
@@ -23,21 +22,10 @@ export class Registration extends Component {
   }
 
   logIn() {
-    let user = new Parse.User();
-    let username = this.refs.username.value;
-    let password = this.refs.password.value;
-    user.set('username', username);
-    user.set('password', password);
-    user.set('role', 'admin');
+    let username = this.refs.username.value,
+        password = this.refs.password.value;
 
-    user.signUp(null, {
-      success: function(user) {
-        history.replaceState(null, '/checkIsLogined')
-      },
-      error: function(user, error) {
-        console.log('Error: ' + error.code + ' ' + error.message);
-      }
-    });
+    console.log(username, password);
   }
 
   render() {
